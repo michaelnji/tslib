@@ -1,0 +1,85 @@
+{
+  "name": "tslib",
+  "version": "1.0.2",
+  "author": {
+    "name": "COD3V1L",
+    "email": "codebase65@outlook.com",
+    "url": "https://michaelnji.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelnji/tslib.git"
+  },
+  "main": "./dist/tslib.cjs",
+  "module": "./dist/tslib.esm.js",
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "dts-bundle-generator": "^9.2.4",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.0",
+    "np": "^10.0.6",
+    "prettier": "^3.2.4",
+    "terser": "^5.31.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "upgradeps": "^2.0.6",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/tslib.cjs",
+      "import": "./dist/tslib.esm.js",
+      "types": "./dist/tslib.d.ts"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/",
+      "types": "./dist/"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/michaelnji/tslib/issues"
+  },
+  "description": "request handling in nuxt simplified",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md",
+    "src",
+    "package.json"
+  ],
+  "homepage": "https://github.com/michaelnji/tslib#readme",
+  "jsdelivr": "./dist/tslib.iife.js",
+  "keywords": [
+    "refid",
+    "unique"
+  ],
+  "license": "MIT",
+  "packageManager": "npm@10.8.0",
+  "private": false,
+  "scripts": {
+    "dev": "vite --host",
+    "prebuild": "rm -rf dist/*",
+    "build": "tsc && vite build",
+    "postbuild": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
+    "test": "vitest",
+    "test:c": "vitest --coverage",
+    "format": "prettier . --write",
+    "upgrade": "upgradeps",
+    "release": "bun run build && np"
+  },
+  "type": "module",
+  "types": "./dist/tslib.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/tslib.d.ts"
+      ]
+    }
+  },
+  "typings": "./dist/tslib.d.ts"
+}
