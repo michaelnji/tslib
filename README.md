@@ -9,7 +9,7 @@ This template uses:
 ### PS: Do not forget to change the name  of the library to yours!
 Before you start coding, make sure you open the search bar, search for `tslib` and replace it with the name you want to give your library.
 
-ALso edit the `package.json` file to match your information.
+Also edit the `package.json` file to match your information.
 
 ### Commands
 - Development 
